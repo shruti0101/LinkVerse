@@ -1,7 +1,7 @@
 import { Poppins, Roboto } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/Navbar";
-
+import Script from "next/script"; // ✅ Next.js script loader
 
 const poppins = Poppins({
   variable: "--font-poppins",
@@ -25,11 +25,17 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <body className={`${poppins.variable} ${roboto.variable} antialiased`}>
         <Navbar />
-
         {children}
 
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r121/three.min.js"></script>
-        <script src="https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.globe.min.js"></script>
+        {/* ✅ Load external scripts */}
+        <Script
+          src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r121/three.min.js"
+          strategy="beforeInteractive"
+        />
+        <Script
+          src="https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.globe.min.js"
+          strategy="beforeInteractive"
+        />
       </body>
     </html>
   );
