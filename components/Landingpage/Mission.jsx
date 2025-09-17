@@ -17,7 +17,7 @@ const tabs = [
     title: "Security",
     heading: "Enterprise-Grade Security",
     desc: "Protect your business with next-gen cybersecurity solutions. Our advanced monitoring and AI-driven protection shield your data from modern threats, ensuring peace of mind and compliance at every level.",
-    img: "/images/security.png",
+    img: "/security.png",
     cta: "Discover Security",
   },
   {
