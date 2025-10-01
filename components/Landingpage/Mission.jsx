@@ -1,88 +1,160 @@
 "use client";
-import { useState } from "react";
+import { useState, useEffect } from "react";
+import { motion, AnimatePresence } from "framer-motion";
 import Image from "next/image";
-import { motion } from "framer-motion";
+import { FaCheckSquare } from "react-icons/fa"; // ✅ checkbox icon
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 const tabs = [
   {
-    id: "collaboration",
-    title: "Collaboration",
-    heading: "Smarter Team Collaboration",
-    desc: "Empower your workforce with seamless collaboration tools. From real-time file sharing to integrated communication channels, LinkVerse makes teamwork effortless, no matter where your people are.",
-    img: "/collab.png",
-   
+    id: 1,
+    title: "Empowering Digital Infrastructure",
+    description: `We deliver end-to-end networking and infrastructure solutions designed to strengthen enterprise connectivity, enhance security, and support business growth in the digital era. Our infrastructure services ensure seamless communication, high performance, and future-ready scalability.`,
+    points: [
+      "High-Speed Connectivity – Reliable LAN, WAN, and wireless solutions tailored for enterprises.",
+      "Scalable Infrastructure – Modular and cloud-ready systems to adapt to business growth.",
+      "Optimized Data Centers – Efficient and secure server, storage, and virtualization solutions.",
+      "Enterprise-Grade Security – Network protection through firewalls, monitoring, and access control.",
+    ],
+    image: "/Cloud-1.gif",
   },
   {
-    id: "security",
-    title: "Security",
-    heading: "Enterprise-Grade Security",
-    desc: "Protect your business with next-gen cybersecurity solutions. Our advanced monitoring and AI-driven protection shield your data from modern threats, ensuring peace of mind and compliance at every level.",
-    img: "/security.png",
-    cta: "Discover Security",
+    id: 2,
+    title: "Sustainable & Reliable Networking",
+    description: `Our approach focuses on building sustainable, resilient, and secure networks that minimize downtime while maximizing performance. We integrate cutting-edge technologies with best practices to ensure compliance, scalability, and long-term efficiency.`,
+    points: [
+      "Smart Networking – IoT-ready infrastructure for smarter business operations.",
+      "Cloud Integration – Seamless migration and hybrid cloud solutions.",
+      "24/7 Monitoring – Proactive support to minimize risks and downtime.",
+      "Green IT Practices – Energy-efficient networking and infrastructure planning.",
+    ],
+     image: "/partner.gif",
+
   },
   {
-    id: "analytics",
-    title: "Analytics",
-    heading: "Data-Driven Insights",
-    desc: "Turn raw data into actionable insights with LinkVerse Analytics. Unlock predictive intelligence, track performance in real-time, and make smarter business decisions with clarity and confidence.",
-    img: "/images/analytics.png",
-    cta: "Start Analyzing",
+    id: 3,
+    title: "Building  Long-Term Partnerships",
+    description: `We believe in creating lasting collaborations by providing reliable, future-ready infrastructure services. Our solutions are built around customer needs, ensuring long-term success through trust, performance, and continuous innovation.`,
+    points: [
+      "Tailored Solutions – Custom networking strategies for diverse industries.",
+      "Future-Proof Technology – Deploying the latest in cloud, AI, and automation.",
+      "Dedicated Support – Expert teams available round-the-clock for assistance.",
+      "Agile Collaboration – Scalable models designed to grow with your business.",
+      "Commitment to Excellence – Delivering consistent, high-quality infrastructure services.",
+    ],
+       image: "/building.webp",
   },
 ];
 
-export default function Mission() {
-  const [active, setActive] = useState("collaboration");
+export default function PremiumTabs() {
 
-  const activeTab = tabs.find((t) => t.id === active);
+
+
+
+
+  const [activeIndex, setActiveIndex] = useState(0);
+
+  // Auto change every 7s
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setActiveIndex((prev) => (prev + 1) % tabs.length);
+    }, 9000);
+    return () => clearInterval(interval);
+  }, []);
+
+
+  useEffect(() => {
+    AOS.init({
+      duration: 1200,
+      once: true,
+      easing: "ease-in-out",
+      offset: 100,
+    });
+  }, []);
 
   return (
-    <div className="w-full max-w-7xl mx-auto px-10 py-12">
-      {/* Tabs */}
-      <div className="flex justify-center gap-16 border-b border-gray-300 relative">
-        {tabs.map((tab) => (
-          <button
-            key={tab.id}
-            onClick={() => setActive(tab.id)}
-            className={`relative pb-2 text-xl font-bold ${
-              active === tab.id ? "text-[#C53913]" : "text-gray-700"
-            }`}
-          >
-            {tab.title}
-            {active === tab.id && (
-              <motion.div
-                layoutId="underline"
-                className="h-[2px] absolute left-0 right-0 bottom-0 bg-[#C53913] rounded"
+    <section className="w-full bg-gradient-to-r from-gray-50 via-white to-gray-50 py-16">
+      <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-12 items-center px-6">
+        
+        {/* LEFT SIDE - CONTENT */}
+        <div className="flex flex-col">
+          {/* Tab Headers */}
+          <div className="flex border-b border-gray-200 mb-8">
+            {tabs.map((tab, index) => (
+              <button
+                key={tab.id}
+                onClick={() => setActiveIndex(index)}
+                className={`relative px-5 py-3 text-lg font-medium transition-all ${
+                  index === activeIndex
+                    ? "text-[#ff6600]"
+                    : "text-gray-500 hover:text-gray-700"
+                }`}
+              >
+                {tab.title.split(" ")[0]} {/* short label */}
+                {index === activeIndex && (
+                  <motion.div
+                    layoutId="underline"
+                    className="absolute left-0 right-0 bottom-0 h-[3px] bg-[#ff6600] rounded-full"
+                  />
+                )}
+              </button>
+            ))}
+          </div>
+
+          {/* Tab Content */}
+          <AnimatePresence data-aos="fade-up" mode="wait">
+            <motion.div
+              key={tabs[activeIndex].id}
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0, y: -20 }}
+              transition={{ duration: 0.6 }}
+            >
+              <h2 className="text-3xl md:text-4xl font-extrabold text-gray-900 mb-6">
+                {tabs[activeIndex].title}
+              </h2>
+              <p className="text-lg text-gray-600 leading-relaxed mb-6">
+                {tabs[activeIndex].description}
+              </p>
+              <ul className="space-y-3 text-gray-800">
+                {tabs[activeIndex].points.map((point, idx) => (
+                  <li key={idx} className="flex items-start gap-3">
+                    <FaCheckSquare className="text-[#ff6600] mt-1 flex-shrink-0" />
+                    {point}
+                  </li>
+                ))}
+              </ul>
+            </motion.div>
+          </AnimatePresence>
+        </div>
+
+        {/* RIGHT SIDE - IMAGE */}
+        <div className="relative w-full mt-20 h-80 md:h-[450px]">
+          <AnimatePresence mode="wait">
+            <motion.div
+              key={tabs[activeIndex].id}
+              initial={{ opacity: 0, scale: 1.05 }}
+              animate={{ opacity: 1, scale: 1 }}
+              exit={{ opacity: 0, scale: 0.95 }}
+              transition={{ duration: 0.8 }}
+              className="overflow-hidden"
+            >
+
+              <Image data-aos="fade-left"
+                src={tabs[activeIndex].image}
+                alt={tabs[activeIndex].title}
+                width={500}
+                height={500}
+                className="object-contain rounded-md"
               />
-            )}
-          </button>
-        ))}
+           
+            </motion.div>
+          </AnimatePresence>
+        </div>
       </div>
 
-      {/* Content */}
-      <motion.div
-        key={activeTab.id}
-        initial={{ opacity: 0, y: 15 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.4 }}
-        className="mt-10 grid md:grid-cols-2 gap-10 items-center"
-      >
-        <div>
-          <h2 className="text-2xl font-semibold mb-4">
-            {activeTab.heading}
-          </h2>
-          <p className="text-gray-600 mb-6">{activeTab.desc}</p>
-       
-        </div>
-        <div className="flex justify-center">
-          <Image
-            src={activeTab.img}
-            alt={activeTab.title}
-            width={450}
-            height={300}
-            className="rounded-md shadow-md"
-          />
-        </div>
-      </motion.div>
-    </div>
+      
+    </section>
   );
 }

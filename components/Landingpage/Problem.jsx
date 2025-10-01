@@ -1,22 +1,19 @@
 "use client";
-import React from "react";
+import React, { useEffect } from "react";
 import { motion } from "framer-motion";
+import Image from "next/image";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 export default function Problem() {
-  const stats = [
-    {
-      label: "Rise in exploited zero-day vulnerabilities (YoY, 2023)",
-      value: 56,
-    },
-    {
-      label: "Growth in ransomware incidents worldwide (YoY, 2023)",
-      value: 73,
-    },
-    {
-      label: "Increase in reported data breaches & leaks (YoY, 2023)",
-      value: 56,
-    },
-  ];
+  useEffect(() => {
+    AOS.init({
+      duration: 1200,
+      once: true,
+      easing: "ease-in-out",
+      offset: 100,
+    });
+  }, []);
 
   return (
     <>
@@ -27,146 +24,163 @@ export default function Problem() {
         {/* Overlay */}
         <div className="absolute inset-0 bg-[#F7F5F1]/70"></div>
 
-        <div className="relative max -w-7xl mx-auto flex flex-col md:flex-row items-center md:items-start justify-between gap-12">
+        <div className="relative w-full mx-auto flex flex-col md:flex-row items-center md:items-start justify-between gap-14">
+          {/* Right Image with Stats Below */}
+          <div data-aos="fade-right" className="flex-1 flex flex-col items-center md:items-end gap-10 relative">
+            <Image
+              width={450}
+              height={450}
+              src="/server2.jpg"
+              alt="About LinkVerse"
+              className="rounded-2xl absolute left-0 "
+              data-aos="zoom-in-up"
+            />
+
+            <Image
+              width={450}
+              height={450}
+              src="/datacenter.jpg"
+              alt="About LinkVerse"
+              className="rounded-2xl absolute top-65 "
+              data-aos="zoom-in-down"
+            />
+
+            {/* ✅ Stats placed below the images */}
+            <div className="relative mt-[600px] flex flex-col md:flex-row items-center justify-center gap-12">
+              {/* Stat 1 */}
+              <div className="flex flex-col items-center" data-aos="flip-left">
+                <div className="relative w-40 h-40">
+                  <svg className="w-full h-full -rotate-90">
+                    <circle cx="80" cy="80" r="70" stroke="#333" strokeWidth="12" fill="none" />
+                    <motion.circle
+                      cx="80"
+                      cy="80"
+                      r="70"
+                      stroke="#F96614"
+                      strokeWidth="12"
+                      fill="none"
+                      strokeLinecap="round"
+                      initial={{ strokeDasharray: "0,440" }}
+                      animate={{ strokeDasharray: "436,440" }}
+                      transition={{ duration: 2 }}
+                    />
+                  </svg>
+                  <div className="absolute text-black inset-0 flex items-center justify-center text-2xl font-bold">
+                    99%
+                  </div>
+                </div>
+                <p className="mt-4 text-[#F96614] font-semibold text-lg">Network Uptime</p>
+                <p className="text-black text-sm text-center">ensured through robust infrastructure</p>
+              </div>
+
+              {/* Stat 2 */}
+              <div className="flex flex-col items-center" data-aos="flip-right">
+                <div className="relative w-40 h-40">
+                  <svg className="w-full h-full -rotate-90">
+                    <circle cx="80" cy="80" r="70" stroke="#333" strokeWidth="12" fill="none" />
+                    <motion.circle
+                      cx="80"
+                      cy="80"
+                      r="70"
+                      stroke="#F96614"
+                      strokeWidth="12"
+                      fill="none"
+                      strokeLinecap="round"
+                      initial={{ strokeDasharray: "0,440" }}
+                      animate={{ strokeDasharray: "405,440" }}
+                      transition={{ duration: 2 }}
+                    />
+                  </svg>
+                  <div className="absolute text-black inset-0 flex items-center justify-center text-2xl font-bold">
+                    92%
+                  </div>
+                </div>
+                <p className="mt-4 text-[#F96614] font-semibold text-lg">Client Satisfaction</p>
+                <p className="text-black text-sm text-center">delivering reliable IT solutions</p>
+              </div>
+            </div>
+          </div>
+
           {/* Left Text */}
-          <div className="flex-1 text-center md:text-left space-y-6">
-            <p className="uppercase text-[#F96614] tracking-wider font-semibold">
-              The Good News
+          <div data-aos="fade-left" className="flex-1 text-center md:text-left space-y-6">
+            <p
+              className="uppercase border-l-[3px] border-[#F96614] text-[#F96614] text-2xl tracking-wider font-bold pl-2"
+              data-aos="fade-down"
+            >
+              About Us
             </p>
-            <h2 className="text-4xl text-black md:text-5xl font-extrabold leading-tight">
-              A new <span className="text-[#F96614]">AI-driven era</span>{" "}
-              is here
-            </h2>
-            <p className="text-lg text-black">
-              Artificial Intelligence is transforming industries — automating
-              tasks, accelerating decisions, and driving <strong>innovation at unprecedented scale</strong>.
-              Enterprises adopting GenAI are witnessing faster product
-              development, cost savings, and stronger customer engagement.
-            </p>
-          </div>
 
-          {/* Right Stats Circles */}
-          <div className="flex-1 flex flex-col md:flex-row items-center justify-center gap-12">
-            {/* Stat 1 */}
-            <div className="flex flex-col items-center">
-              <div className="relative w-40 h-40">
-                <svg className="w-full h-full -rotate-90">
-                  <circle
-                    cx="80"
-                    cy="80"
-                    r="70"
-                    stroke="#333"
-                    strokeWidth="12"
-                    fill="none"
-                  />
-                  <motion.circle
-                    cx="80"
-                    cy="80"
-                    r="70"
-                    stroke="#F96614"
-                    strokeWidth="12"
-                    fill="none"
-                    strokeLinecap="round"
-                    initial={{ strokeDasharray: "0,440" }}
-                    animate={{ strokeDasharray: "342,440" }} // 78%
-                    transition={{ duration: 2 }}
-                  />
-                </svg>
-                <div className="absolute text-black inset-0 flex items-center justify-center text-2xl font-bold">
-                  78%
-                </div>
+            <p className="text-xl text-black" data-aos="fade-up">
+              At <strong className="text-[#F96614]">LinkVerse</strong>, we specialize in delivering
+              cutting-edge networking and infrastructure solutions that empower businesses to stay
+              connected, secure, and future-ready. With a team of skilled professionals and years of
+              industry experience, we design, implement, and manage robust IT infrastructures that
+              drive efficiency and innovation.
+              <br />
+              <br />
+              Our expertise spans across network design, cloud integration, cybersecurity, data
+              centers, structured cabling, and enterprise IT solutions, ensuring that every project
+              we deliver meets the highest standards of reliability and performance.
+              <br />
+              <br />
+              We believe technology should simplify, not complicate, your business operations.
+              That’s why our approach is centered on understanding your unique needs, offering
+              customized solutions, and providing ongoing support that guarantees long-term success.
+            </p>
+
+            {/* Feature Cards */}
+            <div className="relative grid grid-cols-1 md:grid-cols-2 gap-8">
+              {/* Item 1 */}
+              <div
+                className="relative bg-white shadow-lg rounded-2xl p-6 hover:shadow-xl transition-shadow duration-300"
+                data-aos="zoom-in"
+              >
+                <span className="absolute -left-6 top-6 flex h-10 w-10 items-center justify-center rounded-full bg-gradient-to-r from-[#F96614] to-orange-500 text-white font-bold shadow-md">
+                  ✓
+                </span>
+                <h3 className="text-black font-semibold text-xl mb-2">End-to-End Solutions</h3>
+                <p className="text-black text-sm leading-relaxed">From planning to execution, we handle everything with precision.</p>
               </div>
-              <p className="mt-4 text-[#F96614] font-semibold text-lg">
-                AI Usage Surge
-              </p>
-              <p className="text-black text-sm text-center">
-                growth in enterprise adoption
-              </p>
+
+              {/* Item 2 */}
+              <div
+                className="relative bg-white shadow-lg rounded-2xl p-6 hover:shadow-xl transition-shadow duration-300"
+                data-aos="zoom-in"
+                data-aos-delay="150"
+              >
+                <span className="absolute -left-6 top-6 flex h-10 w-10 items-center justify-center rounded-full bg-gradient-to-r from-[#F96614] to-orange-500 text-white font-bold shadow-md">
+                  ✓
+                </span>
+                <h3 className="text-black font-semibold text-xl mb-2">Scalable Infrastructure</h3>
+                <p className="text-black text-sm leading-relaxed">Designed to grow with your business and adapt to future needs.</p>
+              </div>
+
+              {/* Item 3 */}
+              <div
+                className="relative bg-white shadow-lg rounded-2xl p-6 hover:shadow-xl transition-shadow duration-300"
+                data-aos="zoom-in"
+                data-aos-delay="300"
+              >
+                <span className="absolute -left-6 top-6 flex h-10 w-10 items-center justify-center rounded-full bg-gradient-to-r from-[#F96614] to-orange-500 text-white font-bold shadow-md">
+                  ✓
+                </span>
+                <h3 className="text-black font-semibold text-xl mb-2">Security First</h3>
+                <p className="text-black text-sm leading-relaxed">Ensuring your networks and data remain secure and protected.</p>
+              </div>
+
+              {/* Item 4 */}
+              <div
+                className="relative bg-white shadow-lg rounded-2xl p-6 hover:shadow-xl transition-shadow duration-300"
+                data-aos="zoom-in"
+                data-aos-delay="450"
+              >
+                <span className="absolute -left-6 top-6 flex h-10 w-10 items-center justify-center rounded-full bg-gradient-to-r from-[#F96614] to-orange-500 text-white font-bold shadow-md">
+                  ✓
+                </span>
+                <h3 className="text-black font-semibold text-xl mb-2">24/7 Support</h3>
+                <p className="text-black text-sm leading-relaxed">Always available to keep your business running smoothly.</p>
+              </div>
             </div>
-
-            {/* Stat 2 */}
-            <div className="flex flex-col items-center">
-              <div className="relative w-40 h-40">
-                <svg className="w-full h-full -rotate-90">
-                  <circle
-                    cx="80"
-                    cy="80"
-                    r="70"
-                    stroke="#333"
-                    strokeWidth="12"
-                    fill="none"
-                  />
-                  <motion.circle
-                    cx="80"
-                    cy="80"
-                    r="70"
-                    stroke="#F96614"
-                    strokeWidth="12"
-                    fill="none"
-                    strokeLinecap="round"
-                    initial={{ strokeDasharray: "0,440" }}
-                    animate={{ strokeDasharray: "414,440" }} // 94%
-                    transition={{ duration: 2 }}
-                  />
-                </svg>
-                <div className="absolute text-black inset-0 flex items-center justify-center text-2xl font-bold">
-                  94%
-                </div>
-              </div>
-              <p className="mt-4 text-[#F96614] font-semibold text-lg">
-                Development Focus
-              </p>
-              <p className="text-black text-sm text-center">
-                enterprises exploring GenAI solutions
-              </p>
-            </div>
-          </div>
-        </div>
-
-        {/* Second Row */}
-        <div className="relative max-w-7xl mx-auto flex flex-col md:flex-row justify-between gap-12 mt-16">
-          {/* Left Stats */}
-          <div className="flex-1 flex flex-col space-y-8">
-            {stats.map((stat, index) => (
-              <div key={index}>
-                <p className="text-sm md:text-lg font-medium text-black mb-2">
-                  {stat.label}
-                </p>
-                <div className="relative h-4 bg-transparent rounded-full overflow-hidden">
-                  {/* Background gradient bar */}
-                  <div className="absolute inset-0 bg-gradient-to-r from-[#000] via-[#F96614] to-[#F96614] opacity-80"></div>
-
-                  {/* Animated fill bar */}
-                  <motion.div
-                    className="absolute top-0 left-0 h-full bg-gradient-to-r from-[#F96614] to-[#F96614]"
-                    initial={{ width: "0%" }}
-                    animate={{ width: `${stat.value}%` }}
-                    transition={{ duration: 1.8, ease: "easeOut" }}
-                  ></motion.div>
-                </div>
-                {/* Value */}
-                <p className="mt-2 text-2xl text-black font-bold">{stat.value}%</p>
-              </div>
-            ))}
-          </div>
-
-          {/* Right Text */}
-          <div className="flex-1 flex flex-col justify-center text-center md:text-left space-y-4">
-            <p className="uppercase text-[#F96614] tracking-wider font-semibold">
-              The Bad News
-            </p>
-            <h2 className="text-3xl md:text-4xl font-extrabold text-black leading-snug">
-              Cybercriminals are <br />
-              weaponizing AI to <br />
-              outpace defenses.
-            </h2>
-            <p className="text-lg text-black">
-              The same technologies empowering businesses are also fueling{" "}
-              <strong>faster, more sophisticated cyberattacks</strong>.  
-              Zero-day exploits, ransomware campaigns, and large-scale breaches
-              are rising at alarming rates — leaving unprepared organizations
-              vulnerable.
-            </p>
           </div>
         </div>
       </section>

@@ -1,95 +1,127 @@
 "use client";
-import { ArrowUpRight, Settings, ClipboardCheck, Headphones, GraduationCap, Users, ShieldCheck } from "lucide-react";
+import { useState, useEffect } from "react";
+import { ArrowUpRight } from "lucide-react";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
-export default function Markets() {
-  const services = [
-    {
-      title: "Managed Services",
-      desc: "We have the proven expertise to host, monitor, and manage your wireless transport infrastructure around the clock.",
-      icon: <Settings className="w-6 h-6 text-[#F96614]" />,
-    },
-    {
-      title: "Project Services",
-      desc: "Aviat offers a wide range of project-based services to help you manage your network for optimal performance and reliability while improving operational efficiency.",
-      icon: <ClipboardCheck className="w-6 h-6 text-[#F96614]" />,
-    },
-    {
-      title: "Support",
-      desc: "Aviat Networks offers industry-leading maintenance and support services focused on optimizing the investments you have made in your network infrastructure.",
-      icon: <Headphones className="w-6 h-6 text-[#F96614]" />,
-    },
-    {
-      title: "Education & Certification",
-      desc: "Aviat training helps build a strong foundation in microwave and IP/MPLS networking concepts, enabling students to pursue successful careers in converged microwave and IP routing technologies.",
-      icon: <GraduationCap className="w-6 h-6 text-[#F96614]" />,
-    },
-    {
-      title: "Consulting Services",
-      desc: "Our experts provide tailored consulting to optimize your wireless strategies, from planning to implementation and beyond.",
-      icon: <Users className="w-6 h-6 text-[#F96614]" />,
-    },
-    {
-      title: "Network Security",
-      desc: "Protect your infrastructure with advanced security solutions and proactive monitoring against modern cyber threats.",
-      icon: <ShieldCheck className="w-6 h-6 text-[#F96614]" />,
-    },
-  ];
+const services = [
+  { 
+    title: "Mobile Operators", 
+    subtitle: "LinkVerse 5G-ready networks delivering seamless coverage and high-speed connectivity.", 
+    image: "/services/Mobile-Operators-hp-tile.jpg" 
+  },
+  { 
+    title: "WISPs", 
+    subtitle: "LinkVerse provides reliable last-mile wireless solutions for rural and underserved regions.", 
+    image: "/services/WISPs-hp-tile.jpg" 
+  },
+  { 
+    title: "Public Safety", 
+    subtitle: "Mission-critical communication networks by LinkVerse for first responders and emergency services.", 
+    image: "/services/Public-safesafety-hp-tile.jpg" 
+  },
+  { 
+    title: "Government", 
+    subtitle: "Secure and scalable LinkVerse networks supporting digital governance initiatives.", 
+    image: "/services/Government-hp-tile.jpg" 
+  },
+  { 
+    title: "Utilities", 
+    subtitle: "Smart grid and infrastructure connectivity solutions by LinkVerse ensuring energy and water reliability.", 
+    image: "/services/Utilities-hp-tile.jpg" 
+  },
+  { 
+    title: "Oil and Gas", 
+    subtitle: "LinkVerse robust wireless infrastructure for remote exploration and operations.", 
+    image: "/services/Oil-and-Gas-hp-tile.jpg" 
+  },
+  { 
+    title: "Mining", 
+    subtitle: "Durable wireless networks from LinkVerse designed for extreme industrial environments.", 
+    image: "/services/Minings-hp-tile.jpg" 
+  },
+  { 
+    title: "Transportation", 
+    subtitle: "Smart mobility and wireless transit solutions by LinkVerse for connected and safe journeys.", 
+    image: "/services/Transportation-hp-tile.jpg" 
+  },
+];
+
+export default function ServicesGrid() {
+  const [activeCard, setActiveCard] = useState(null);
+
+  useEffect(() => {
+    AOS.init({
+      duration: 1000,
+      once: true,
+      easing: "ease-in-out",
+    });
+  }, []);
 
   return (
-    <section style={{backgroundImage:"url('/tower.png')"}} className="relative bg-contain bg-no-repeat bg-fixed bg-center py-19">
-      <div className="max-w-7xl mx-auto px-6 py-20 grid grid-cols-1 md:grid-cols-2 gap-16">
-        {/* Left content - sticky */}
-       <div className="md:sticky md:top-28 self-start">
-  <span className="text-sm font-semibold tracking-[0.15em] text-[#F96614] uppercase">
-    AVIAT SERVICES
-  </span>
+    <section
+      style={{ backgroundImage: "url('/services/bg.jpg')" }}
+      className="bg-cover bg-center py-16 md:py-20 relative overflow-hidden"
+    >
+      {/* Title Section */}
+      <div className="max-w-4xl mx-auto mb-12 text-center px-6" data-aos="fade-down">
+        <span className="text-sm font-semibold tracking-[0.2em] uppercase text-[#F96614]">
+          Markets We Serve
+        </span>
+        <h2 className="mt-4 text-3xl md:text-5xl font-extrabold leading-tight text-gray-900">
+          Empowering{" "}
+          <span className="bg-gradient-to-r from-[#F96614] to-orange-700 bg-clip-text text-transparent">
+            Industries Worldwide
+          </span>
+        </h2>
+        <p className="mt-4 text-base md:text-xl text-gray-600 max-w-2xl mx-auto">
+          From mobile operators to mission-critical public safety,{" "}
+          <strong>LinkVerse</strong> delivers <strong>resilient connectivity</strong> and{" "}
+          <strong>future-ready networks</strong> across diverse sectors.
+        </p>
+      </div>
 
-  <h2 className="text-4xl lg:text-5xl font-extrabold mt-4 leading-snug text-gray-900">
-    Unlocking the Power of{" "}
-    <span className="bg-gradient-to-r from-[#F96614] to-orange-700 bg-clip-text text-transparent">
-      Wireless Infrastructure
-    </span>
-  </h2>
+      {/* Grid */}
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 px-6 md:px-12" data-aos="fade-up">
+        {services.map((service, index) => (
+          <div
+            key={index}
+            onClick={() => setActiveCard(index)}
+            data-aos="zoom-in"
+            data-aos-delay={index * 100}
+            className="relative group cursor-pointer rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500"
+          >
+            {/* Image */}
+            <img
+              src={service.image}
+              alt={service.title}
+              className={`w-full h-64 md:h-72 object-cover transition-transform duration-500 group-hover:scale-105 ${
+                activeCard === index ? "grayscale-0" : "grayscale group-hover:grayscale-0"
+              }`}
+            />
 
-  <p className="mt-4 text-lg text-gray-600 leading-relaxed">
-    From strategy to security, we deliver{" "}
-    <span className="font-semibold text-[#F96614]">end-to-end services</span>  
-    that transform networks into engines of reliability, scalability,  
-    and long-term growth.
-  </p>
+            {/* Overlay */}
+            <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent transition-opacity duration-500"></div>
 
-  <button className="mt-8 inline-flex items-center gap-3 bg-[#F96614] hover:bg-[#d45210] text-white font-medium px-6 py-3 rounded-full shadow-lg transition-all duration-300">
-    Learn More
-    <ArrowUpRight className="w-5 h-5" />
-  </button>
-</div>
-
-
-        {/* Right content - scrolls */}
-        <div className="flex flex-col gap-10">
-          {services.map((service, i) => (
-            <div
-              key={i}
-              className="bg-[#FFF8EF] p-4 group relative border-l-4  border-[#F96614] pl-6 transition-all duration-300"
-            >
-              <div className="flex items-center gap-3">
-
-                <div>
-                    <div className="w-10 h-10 flex items-center justify-center bg-[#F96614]/10 rounded-full animate-bounce group-hover:animate-none transition">
-                      {service.icon}
-                    </div>
-                </div>
-                <h3 className="text-2xl font-semibold text-gray-900 group-hover:text-[#F96614] transition-colors">
-                  {service.title}
-                </h3>
-              </div>
-              <p className="text-lg text-black mt-3 leading-relaxed">
-                {service.desc}
-              </p>
-         
+            {/* Content */}
+            <div className="absolute bottom-4 left-4 pr-4 text-white">
+              <h3 className="text-lg md:text-xl font-semibold">{service.title}</h3>
+              <p className="text-sm md:text-base">{service.subtitle}</p>
             </div>
-          ))}
-        </div>
+
+            {/* Arrow */}
+            {activeCard !== index && (
+              <div
+                className="absolute top-4 left-4 bg-[#F96614] p-3 rounded-full 
+                           transition-all duration-500 opacity-90 
+                           group-hover:opacity-0 group-hover:scale-0 
+                           group-hover:translate-x-2 group-hover:-translate-y-2"
+              >
+                <ArrowUpRight className="w-5 h-5 text-white" />
+              </div>
+            )}
+          </div>
+        ))}
       </div>
     </section>
   );

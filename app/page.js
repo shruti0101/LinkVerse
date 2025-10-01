@@ -5,15 +5,31 @@ import Missinvision from "@/components/Landingpage/Mission"
 import Services from "@/components/Landingpage/Sevices"
 import Markets from "@/components/Landingpage/Markets"
 import Problem from "@/components/Landingpage/Problem";
+import Whychoose from "@/components/Landingpage/Whychoose"
+import Faq from "@/components/Landingpage/Faq"
+import Approach from "@/components/Landingpage/Approach"
+import Map from "@/components/Landingpage/Map";
+import Scrolltop from "@/components/Landingpage/Scrolltop"
+import Whatsapp from "@/components/Landingpage/Whatsapp";
+import Form from "@/components/Landingpage/Form"
 export default function Home() {
   return (
    <>
+
+   <Scrolltop></Scrolltop>
+   <Whatsapp></Whatsapp>
    <Hero></Hero>
    <Problem></Problem>
    <Missinvision></Missinvision>
-      <Howtohelp></Howtohelp>
+  
    <Services></Services>
+       <Howtohelp></Howtohelp>
    <Markets></Markets>
+   <Approach></Approach>
+   <Map></Map>
+   <Form></Form>
+   <Whychoose></Whychoose>
+   <Faq></Faq>
    </>
   );
 }

@@ -1,85 +1,94 @@
+
+
+
 "use client";
-import { useState } from "react";
-import { ArrowUpRight } from "lucide-react";
+import { ArrowUpRight, Settings, ClipboardCheck, Headphones, GraduationCap, Users, ShieldCheck } from "lucide-react";
 
-const services = [
-  { title: "Mobile Operators", subtitle: "5G Empowerment", image: "/services/Mobile-Operators-hp-tile.jpg" },
-  { title: "WISPs", subtitle: "Seamless Connectivity", image: "/services/WISPs-hp-tile.jpg" },
-  { title: "Public Safety", subtitle: "Mission-Critical Reliability", image: "/services/Public-safesafety-hp-tile.jpg" },
-  { title: "Government", subtitle: "Secure Networks", image: "/services/Government-hp-tile.jpg" },
-  { title: "Utilities", subtitle: "Infrastructure Reliability", image: "/services/Utilities-hp-tile.jpg" },
-  { title: "Oil and Gas", subtitle: "Exploration Connectivity", image: "/services/Oil-and-Gas-hp-tile.jpg" },
-  { title: "Mining", subtitle: "Wireless Durability", image: "/services/Minings-hp-tile.jpg" },
-  { title: "Transportation", subtitle: "Wireless Transit", image: "/services/Transportation-hp-tile.jpg" },
-];
-
-export default function ServicesGrid() {
-  const [activeCard, setActiveCard] = useState(null);
+export default function Markets() {
+  const services = [
+    {
+      title: "Managed Services",
+      desc: "LinkVerse provides expert managed services to host, monitor, and maintain your network and IT infrastructure 24/7, ensuring optimal performance and uptime.",
+      icon: <Settings className="w-6 h-6 text-[#F96614]" />,
+    },
+    {
+      title: "Project Services",
+      desc: "LinkVerse delivers end-to-end project services including network design, implementation, and optimization for seamless and reliable connectivity.",
+      icon: <ClipboardCheck className="w-6 h-6 text-[#F96614]" />,
+    },
+    {
+      title: "Support",
+      desc: "Our dedicated support team ensures your network infrastructure remains fully operational, minimizing downtime and maximizing ROI on your technology investments.",
+      icon: <Headphones className="w-6 h-6 text-[#F96614]" />,
+    },
+    {
+      title: "Education & Certification",
+      desc: "LinkVerse training programs help build expertise in modern networking technologies, including wireless, IP/MPLS, and infrastructure management for professionals.",
+      icon: <GraduationCap className="w-6 h-6 text-[#F96614]" />,
+    },
+    {
+      title: "Consulting Services",
+      desc: "Our consultants provide tailored guidance to plan, implement, and optimize network strategies, ensuring scalable and secure infrastructures for your business.",
+      icon: <Users className="w-6 h-6 text-[#F96614]" />,
+    },
+    {
+      title: "Network Security",
+      desc: "Protect your network and critical infrastructure with LinkVerse’s proactive cybersecurity solutions, monitoring, and compliance-driven strategies.",
+      icon: <ShieldCheck className="w-6 h-6 text-[#F96614]" />,
+    },
+  ];
 
   return (
-<>
+    <section style={{backgroundImage:"url('/tower.png')"}} className="relative bg-contain bg-no-repeat bg-fixed bg-center py-19">
+      <div className="max-w-7xl mx-auto px-6 py-20 grid grid-cols-1 md:grid-cols-2 gap-16">
+        
+        {/* Left content - sticky */}
+        <div className="md:sticky md:top-28 self-start">
+          <span className="text-sm font-semibold tracking-[0.15em] text-[#F96614] uppercase">
+            LINKVERSE SERVICES
+          </span>
 
-<section style={{backgroundImage:"url('/services/bg.jpg')"}} className="bg-cover   py-20  bg-center relative py-18">
+          <h2 className="text-4xl lg:text-5xl font-extrabold mt-4 leading-snug text-gray-900">
+            Unlocking the Power of{" "}
+            <span className="bg-gradient-to-r from-[#F96614] to-orange-700 bg-clip-text text-transparent">
+              Network & Infrastructure
+            </span>
+          </h2>
 
- <div className="max-w-4xl mx-auto mb-10 text-center px-6">
-    <span className="text-sm font-semibold tracking-[0.2em] uppercase text-[#F96614]">
-      Markets We Serve
-    </span>
-    <h2 className="mt-4 text-4xl md:text-5xl font-extrabold leading-tight text-gray-900">
-      Empowering{" "}
-      <span className="bg-gradient-to-r from-[#F96614] to-orange-700 bg-clip-text text-transparent">
-        Industries Worldwide
-      </span>
-    </h2>
-    <p className="mt-4 text-lg md:text-xl text-gray-600 max-w-2xl mx-auto">
-      From mobile operators to mission-critical public safety, our solutions
-      drive <strong>reliable connectivity</strong> and <strong>future-ready networks</strong>
-      across diverse sectors.
-    </p>
-  </div>
+          <p className="mt-4 text-lg text-gray-600 leading-relaxed">
+            From planning to security, <strong className="text-[#F96614]">LinkVerse</strong> delivers end-to-end services that transform networks into highly reliable, scalable, and future-ready infrastructures.
+          </p>
 
-    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 p-6">
-      {services.map((service, index) => (
-        <div
-          key={index}
-          onClick={() => setActiveCard(index)}
-          className={`relative group cursor-pointer rounded-lg overflow-hidden shadow-md`}
-        >
-          {/* Image */}
-          <img
-            src={service.image}
-            alt={service.title}
-            className={`w-full h-70 object-cover transition-all duration-500 hover:scale-105
-              ${activeCard === index ? "grayscale-0" : "grayscale group-hover:grayscale-0 "}`}
-          />
-
-          {/* Overlay */}
-          <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent"></div>
-
-          {/* Content */}
-          <div className="absolute bottom-3 left-3 text-white">
-            <h3 className="text-lg font-semibold">{service.title}</h3>
-            <p className="text-sm">{service.subtitle}</p>
-          </div>
-
-     {/* Arrow */}
-{activeCard !== index && (
-  <div
-    className="absolute top-3 left-3 bg-[#F96614] p-3 rounded-full 
-               transition-all duration-500 opacity-90 
-               group-hover:opacity-0 group-hover:scale-0 
-               group-hover:translate-x-2 group-hover:-translate-y-2"
-  >
-    <ArrowUpRight className="w-5 h-5 text-white" />
-  </div>
-)}
-
+          <button className="mt-8 inline-flex items-center gap-3 bg-[#F96614] hover:bg-[#d45210] text-white font-medium px-6 py-3 rounded-full shadow-lg transition-all duration-300">
+            Learn More
+            <ArrowUpRight className="w-5 h-5" />
+          </button>
         </div>
-      ))}
-    </div>
 
-</section>
-
-</>
+        {/* Right content - scrolls */}
+        <div className="flex flex-col gap-10">
+          {services.map((service, i) => (
+            <div
+              key={i}
+              className="bg-[#FFF8EF] p-4 group relative border-l-4 border-[#F96614] pl-6 transition-all duration-300"
+            >
+              <div className="flex items-center gap-3">
+                <div>
+                  <div className="w-10 h-10 flex items-center justify-center bg-[#F96614]/10 rounded-full animate-bounce group-hover:animate-none transition">
+                    {service.icon}
+                  </div>
+                </div>
+                <h3 className="text-2xl font-semibold text-gray-900 group-hover:text-[#F96614] transition-colors">
+                  {service.title}
+                </h3>
+              </div>
+              <p className="text-lg text-black mt-3 leading-relaxed">
+                {service.desc}
+              </p>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
   );
 }
