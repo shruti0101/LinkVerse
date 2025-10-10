@@ -8,42 +8,42 @@ const services = [
   { 
     title: "Mobile Operators", 
     subtitle: "LinkVerse 5G-ready networks delivering seamless coverage and high-speed connectivity.", 
-    image: "/services/Mobile-Operators-hp-tile.jpg" 
+    image: "/services/Mobile-Operators-hp-tile.webp" 
   },
   { 
     title: "WISPs", 
     subtitle: "LinkVerse provides reliable last-mile wireless solutions for rural and underserved regions.", 
-    image: "/services/WISPs-hp-tile.jpg" 
+    image: "/services/WISPs-hp-tile.webp" 
   },
   { 
     title: "Public Safety", 
     subtitle: "Mission-critical communication networks by LinkVerse for first responders and emergency services.", 
-    image: "/services/Public-safesafety-hp-tile.jpg" 
+    image: "/services/Public-safesafety-hp-tile.webp" 
   },
   { 
     title: "Government", 
     subtitle: "Secure and scalable LinkVerse networks supporting digital governance initiatives.", 
-    image: "/services/Government-hp-tile.jpg" 
+    image: "/services/Government-hp-tile.webp" 
   },
   { 
     title: "Utilities", 
     subtitle: "Smart grid and infrastructure connectivity solutions by LinkVerse ensuring energy and water reliability.", 
-    image: "/services/Utilities-hp-tile.jpg" 
+    image: "/services/Utilities-hp-tile.webp" 
   },
   { 
     title: "Oil and Gas", 
     subtitle: "LinkVerse robust wireless infrastructure for remote exploration and operations.", 
-    image: "/services/Oil-and-Gas-hp-tile.jpg" 
+    image: "/services/Oil-and-Gas-hp-tile.webp" 
   },
   { 
     title: "Mining", 
     subtitle: "Durable wireless networks from LinkVerse designed for extreme industrial environments.", 
-    image: "/services/Minings-hp-tile.jpg" 
+    image: "/services/Minings-hp-tile.webp" 
   },
   { 
     title: "Transportation", 
     subtitle: "Smart mobility and wireless transit solutions by LinkVerse for connected and safe journeys.", 
-    image: "/services/Transportation-hp-tile.jpg" 
+    image: "/services/Transportation-hp-tile.webp" 
   },
 ];
 

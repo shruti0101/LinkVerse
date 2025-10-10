@@ -1,4 +1,5 @@
 "use client";
+
 import React, { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
@@ -10,6 +11,7 @@ import {
   Instagram,
   Youtube,
   Linkedin,
+  ChevronDown,
 } from "lucide-react";
 
 const services = [
@@ -26,11 +28,12 @@ const services = [
 ];
 
 const Footer = () => {
-  const [isModalOpen, setIsModalOpen] = useState(false);
+  const [showQuickLinks, setShowQuickLinks] = useState(false);
+  const [showServices, setShowServices] = useState(false);
 
   return (
     <footer
-      style={{ backgroundImage: "url('/footer.png')" }}
+      style={{ backgroundImage: "url('/footer.webp')" }}
       className="relative bg-cover bg-center text-gray-300 pt-14 pb-8"
     >
       {/* Overlay */}
@@ -40,10 +43,11 @@ const Footer = () => {
 
       <div className="relative max-w-7xl mx-auto px-6 md:px-12">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-10">
+
           {/* Column 1: Logo + About */}
           <div>
             <Image
-              src="/logo-white.png"
+              src="/logo-white.webp"
               alt="Logo"
               width={180}
               height={50}
@@ -100,6 +104,23 @@ const Footer = () => {
           </div>
 
           {/* Column 2: Quick Links */}
+          <div className="md:hidden">
+            <button
+              className="flex justify-between items-center w-full text-white font-semibold mb-2"
+              onClick={() => setShowQuickLinks(!showQuickLinks)}
+            >
+              Quick Links <ChevronDown className={`transition-transform ${showQuickLinks ? "rotate-180" : ""}`} />
+            </button>
+            {showQuickLinks && (
+              <ul className="pl-2 space-y-2">
+                <li><Link href="/" className="hover:text-[#DA4B01]">Home</Link></li>
+                <li><Link href="/about-us" className="hover:text-[#DA4B01]">About Us</Link></li>
+                <li><Link href="/services" className="hover:text-[#DA4B01]">Services</Link></li>
+                <li><Link href="/blogs" className="hover:text-[#DA4B01]">Blogs</Link></li>
+                <li><Link href="/contact-us" className="hover:text-[#DA4B01]">Contact Us</Link></li>
+              </ul>
+            )}
+          </div>
           <div className="hidden md:block md:ml-8">
             <h3 className="text-white font-semibold text-lg mb-4">Quick Links</h3>
             <ul className="space-y-2 text-md">
@@ -112,6 +133,23 @@ const Footer = () => {
           </div>
 
           {/* Column 3: Services */}
+          <div className="md:hidden">
+            <button
+              className="flex justify-between items-center w-full text-white font-semibold mb-2"
+              onClick={() => setShowServices(!showServices)}
+            >
+              Our Services <ChevronDown className={`transition-transform ${showServices ? "rotate-180" : ""}`} />
+            </button>
+            {showServices && (
+              <ul className="pl-2 space-y-2">
+                {services.map((srv) => (
+                  <li key={srv.id}>
+                    <Link href="/services" className="hover:text-[#DA4B01]">{srv.name}</Link>
+                  </li>
+                ))}
+              </ul>
+            )}
+          </div>
           <div className="hidden md:block">
             <h3 className="text-white font-semibold text-lg mb-4">Our Services</h3>
             <ul className="space-y-2 text-sm uppercase">
@@ -126,12 +164,12 @@ const Footer = () => {
           </div>
 
           {/* Column 4: Certificate */}
-          <div>
+          <div className="mt-6 md:mt-0">
             <h3 className="text-[#FAAC18] font-semibold text-lg mb-4">
               Certified Excellence
             </h3>
             <Image
-              src="/trustseal.png"
+              src="/trustseal.webp"
               alt="Certification"
               width={120}
               height={120}
@@ -144,8 +182,6 @@ const Footer = () => {
             </p>
           </div>
         </div>
-
-    
       </div>
 
       {/* Bottom Bar */}

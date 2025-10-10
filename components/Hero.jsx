@@ -44,19 +44,9 @@ const Hero = () => {
   }, [content.length]);
 
   return (
-    <div
+   <div
       id="bg"
-      style={{
-        height: "100vh",
-        width: "100%",
-        display: "flex",
-        alignItems: "center",
-        justifyContent: "flex-start",
-        textAlign: "left",
-        position: "relative",
-        color: "#fff",
-        padding: "0 8%",
-      }}
+      className="relative w-full h-[70vh] md:h-[100vh] flex flex-col justify-center items-start text-white px-4 sm:px-6 md:px-12 lg:px-20 md:py-20"
     >
       <div style={{ maxWidth: "700px" }}>
         <AnimatePresence mode="wait">
@@ -67,10 +57,10 @@ const Hero = () => {
             exit={{ opacity: 0, y: -30 }}
             transition={{ duration: 1, ease: "easeInOut" }}
           >
-            <h1 style={{ fontSize: "3rem", marginBottom: "1rem", fontWeight: "700", marginTop: "50px", lineHeight: "1.3" }}>
+            <h1 className="text-3xl sm:text-4xl md:text-5xl font-extrabold mb-4 leading-snug">
               {content[index].title}
             </h1>
-            <p style={{ fontSize: "1.25rem", opacity: 0.9, lineHeight: "1.6", maxWidth: "600px", marginBottom: "1.5rem" }}>
+            <p className="text-base sm:text-lg md:text-xl opacity-90 leading-relaxed mb-6">
               {content[index].desc}
             </p>
 

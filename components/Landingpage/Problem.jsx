@@ -19,18 +19,18 @@ export default function Problem() {
     <>
       <section
         style={{ backgroundImage: "url('/dot1.png'),url('/dot2.png')" }}
-        className="relative bg-center bg-cover bg-no-repeat bg-fixed text-white px-6 py-20 md:px-12 overflow-hidden wave-bg"
+        className="relative bg-center bg-cover bg-no-repeat bg-fixed text-white px-6 py-10 md:py-20 md:px-12 overflow-hidden wave-bg"
       >
         {/* Overlay */}
         <div className="absolute inset-0 bg-[#F7F5F1]/70"></div>
 
-        <div className="relative w-full mx-auto flex flex-col md:flex-row items-center md:items-start justify-between gap-14">
+        <div className="relative w-full mx-auto flex flex-col md:flex-row items-center md:items-start justify-between md:gap-14">
           {/* Right Image with Stats Below */}
           <div data-aos="fade-right" className="flex-1 flex flex-col items-center md:items-end gap-10 relative">
             <Image
               width={450}
               height={450}
-              src="/server2.jpg"
+              src="/server2.webp"
               alt="About LinkVerse"
               className="rounded-2xl absolute left-0 "
               data-aos="zoom-in-up"
@@ -39,14 +39,14 @@ export default function Problem() {
             <Image
               width={450}
               height={450}
-              src="/datacenter.jpg"
+              src="/datacenter.webp"
               alt="About LinkVerse"
               className="rounded-2xl absolute top-65 "
               data-aos="zoom-in-down"
             />
 
             {/* ✅ Stats placed below the images */}
-            <div className="relative mt-[600px] flex flex-col md:flex-row items-center justify-center gap-12">
+            <div className="hidden md:flex relative mt-[600px] flex flex-col md:flex-row items-center justify-center gap-12">
               {/* Stat 1 */}
               <div className="flex flex-col items-center" data-aos="flip-left">
                 <div className="relative w-40 h-40">
@@ -65,7 +65,7 @@ export default function Problem() {
                       transition={{ duration: 2 }}
                     />
                   </svg>
-                  <div className="absolute text-black inset-0 flex items-center justify-center text-2xl font-bold">
+                  <div className="absolute text-white inset-0 flex items-center justify-center text-2xl font-bold">
                     99%
                   </div>
                 </div>
@@ -91,7 +91,7 @@ export default function Problem() {
                       transition={{ duration: 2 }}
                     />
                   </svg>
-                  <div className="absolute text-black inset-0 flex items-center justify-center text-2xl font-bold">
+                  <div className="absolute text-white inset-0 flex items-center justify-center text-2xl font-bold">
                     92%
                   </div>
                 </div>
@@ -102,7 +102,7 @@ export default function Problem() {
           </div>
 
           {/* Left Text */}
-          <div data-aos="fade-left" className="flex-1 text-center md:text-left space-y-6">
+          <div data-aos="fade-left" className="flex-1 md:text-left space-y-6">
             <p
               className="uppercase border-l-[3px] border-[#F96614] text-[#F96614] text-2xl tracking-wider font-bold pl-2"
               data-aos="fade-down"
@@ -110,7 +110,7 @@ export default function Problem() {
               About Us
             </p>
 
-            <p className="text-xl text-black" data-aos="fade-up">
+            <p className="md:text-xl text-black" data-aos="fade-up">
               At <strong className="text-[#F96614]">LinkVerse</strong>, we specialize in delivering
               cutting-edge networking and infrastructure solutions that empower businesses to stay
               connected, secure, and future-ready. With a team of skilled professionals and years of
