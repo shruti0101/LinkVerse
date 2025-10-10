@@ -123,7 +123,7 @@ export default function PremiumTabs() {
         </div>
 
         {/* RIGHT SIDE - IMAGE */}
-        <div className="relative w-full mt-10 sm:mt-16 md:mt-0 h-60 sm:h-72 md:h-[450px] flex justify-center items-center">
+        <div className="hidden md:block relative w-full mt-10 sm:mt-16 md:mt-0 h-60 sm:h-72 md:h-[450px] flex justify-center items-center">
           <AnimatePresence mode="wait">
             <motion.div
               key={tabs[activeIndex].id}
@@ -134,12 +134,12 @@ export default function PremiumTabs() {
               className="overflow-hidden w-full flex justify-center"
             >
               <Image
-                data-aos="fade-left"
+                data-aos="fade-up"
                 src={tabs[activeIndex].image}
                 alt={tabs[activeIndex].title}
                 width={500}
                 height={500}
-                className="object-contain rounded-lg w-[60%] sm:w-[80%] "
+                className=" object-contain rounded-lg w-[60%] sm:w-[80%] "
               />
             </motion.div>
           </AnimatePresence>
