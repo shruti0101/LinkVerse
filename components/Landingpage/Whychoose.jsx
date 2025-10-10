@@ -19,7 +19,7 @@ export default function WhyChooseUs() {
       {/* Decorative wire image */}
       <img
         className="absolute top-0 left-0 -rotate-180 opacity-30 w-32 sm:w-40 md:w-64 lg:w-80"
-        src="/wire.png"
+        src="/wire.webp"
         alt="decor"
       />
 

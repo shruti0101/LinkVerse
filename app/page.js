@@ -12,6 +12,8 @@ import Map from "@/components/Landingpage/Map";
 import Scrolltop from "@/components/Landingpage/Scrolltop"
 import Whatsapp from "@/components/Landingpage/Whatsapp";
 import Form from "@/components/Landingpage/Form"
+import Countup from "@/components/Landingpage/Countup"
+import TestimonialSlider from "@/components/Landingpage/Testimonial";
 export default function Home() {
   return (
    <>
@@ -21,7 +23,7 @@ export default function Home() {
    <Hero></Hero>
    <Problem></Problem>
    <Missinvision></Missinvision>
-  
+  <Countup></Countup>
    <Services></Services>
        <Howtohelp></Howtohelp>
    <Markets></Markets>
@@ -29,6 +31,7 @@ export default function Home() {
    <Map></Map>
    <Form></Form>
    <Whychoose></Whychoose>
+   <TestimonialSlider></TestimonialSlider>
    <Faq></Faq>
    </>
   );

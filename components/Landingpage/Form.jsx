@@ -13,15 +13,16 @@ export default function PopupForm({ onClose }) {
   }, []);
 
   const categories = [
-    { id: "bar-processing-machines", name: "Bar Processing Machines" },
-    { id: "concrete-mixers", name: "Concrete Mixers" },
-    { id: "anti-fog-cannon-machine", name: "Anti-Fog Cannon Machine" },
-    { id: "lab-testing-equipment", name: "Lab Testing Equipment" },
-    { id: "material-lifting-equipment", name: "Material Lifting Equipment" },
-    { id: "safety-instrument", name: "Safety Instruments" },
-    { id: "ride-on-roller-plate-compactor", name: "RIDE ON ROLLER / PLATE COMPACTOR" },
-    { id: "surveying-instrument", name: "Surveying Instruments" },
-    { id: "trolley-vibrator", name: "Trolley Vibrator" },
+    { id: "network-design", name: "Network Design & Architecture" },
+    { id: "cloud-infrastructure", name: "Cloud Infrastructure" },
+    { id: "data-center", name: "Data Center Solutions" },
+    { id: "cybersecurity", name: "Cybersecurity Services" },
+    { id: "managed-it", name: "Managed IT Support" },
+    { id: "wireless-solutions", name: "Wireless & Mobility Solutions" },
+    { id: "structured-cabling", name: "Structured Cabling" },
+    { id: "network-monitoring", name: "Network Monitoring & Optimization" },
+    { id: "voip-solutions", name: "VoIP & Unified Communications" },
+    { id: "disaster-recovery", name: "Disaster Recovery Solutions" },
   ];
 
   if (!isOpen) return null;
@@ -63,7 +64,7 @@ export default function PopupForm({ onClose }) {
 
         {/* Form */}
         <form
-          action="https://formsubmit.co/shreeshaktiinfratech@gmail.com"
+          action="https://formsubmit.co/shruti@gmail.com"
           method="POST"
           className="space-y-2 md:ml-3"
         >
