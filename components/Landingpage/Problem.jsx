@@ -18,7 +18,7 @@ export default function Problem() {
   return (
     <>
       <section
-        style={{ backgroundImage: "url('/dot1.png'),url('/dot2.png')" }}
+        style={{ backgroundImage: "url('/dot1.webp'),url('/dot2.webp')" }}
         className="relative bg-center bg-cover bg-no-repeat bg-fixed text-white px-6 py-10 md:py-20 md:px-12 overflow-hidden wave-bg"
       >
         {/* Overlay */}
@@ -28,8 +28,8 @@ export default function Problem() {
           {/* Right Image with Stats Below */}
           <div data-aos="fade-right" className="flex-1 flex flex-col items-center md:items-end gap-10 relative">
             <Image
-              width={450}
-              height={450}
+              width={400}
+              height={400}
               src="/server2.webp"
               alt="About LinkVerse"
               className="rounded-2xl absolute left-0 "
@@ -37,8 +37,8 @@ export default function Problem() {
             />
 
             <Image
-              width={450}
-              height={450}
+              width={400}
+              height={400}
               src="/datacenter.webp"
               alt="About LinkVerse"
               className="rounded-2xl absolute top-65 "

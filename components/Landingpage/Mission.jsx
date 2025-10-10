@@ -139,7 +139,7 @@ export default function PremiumTabs() {
                 alt={tabs[activeIndex].title}
                 width={500}
                 height={500}
-                className="object-contain rounded-lg w-[85%] sm:w-[70%] md:w-full"
+                className="object-contain rounded-lg w-[60%] sm:w-[70%] "
               />
             </motion.div>
           </AnimatePresence>

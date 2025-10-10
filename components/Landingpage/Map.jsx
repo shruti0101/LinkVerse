@@ -5,7 +5,7 @@ const Map = () => {
   return (
     <div>
       <section
-        style={{ backgroundImage: "url(/globee.webp)" }}
+        style={{ backgroundImage: "url(/globee_1.webp)" }}
         className="bg-center bg-fixed h-[50vh] md:h-[70vh] bg-cover w-full  relative flex items-center justify-center"
       >
      
