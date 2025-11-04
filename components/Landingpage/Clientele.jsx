@@ -61,6 +61,7 @@ const ClienteleSection = () => {
           industries — building trust, quality, and lasting relationships.
         </motion.p>
 
+
         {/* Slider */}
         <Slider {...settings}>
           {clients.map((client, index) => (
