@@ -2,7 +2,7 @@
 
 import React, { useEffect, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-
+import Link from "next/link";
 const Hero = () => {
   const content = [
     { title: "Access Products for Any Network, Any Need", desc: "Achieve flexibility and scalability with Aviat’s versatile access products, built to adapt to your evolving network. Experience unmatched performance designed to grow with your business." },
@@ -78,9 +78,12 @@ const Hero = () => {
                 cursor: "pointer",
                 boxShadow: "0 4px 15px rgba(0,0,0,0.2)",
               }}
-              onClick={() => alert("Redirect to Request a Quote Page")}
+              
             >
-              Request a Quote
+              <Link href="/contact-us">
+                  Request a Quote
+              </Link>
+          
             </motion.button>
           </motion.div>
         </AnimatePresence>

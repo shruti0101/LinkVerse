@@ -8,7 +8,7 @@ export default function PopupForm({ onClose }) {
   useEffect(() => {
     const timer = setTimeout(() => {
       setIsOpen(true);
-    }, 5000);
+    }, 15000);
     return () => clearTimeout(timer);
   }, []);
 
@@ -94,6 +94,9 @@ export default function PopupForm({ onClose }) {
             type="tel"
             name="mobile"
             placeholder="Mobile No."
+            minLength={10}
+            maxLength={10}
+            pattern="[0-9] {10}"
             required
             className="w-full p-3 rounded-md bg-[#FFF3E0] border border-gray-300 text-sm sm:text-base"
           />

@@ -2,8 +2,7 @@
 
 import { useState, useEffect } from "react";
 import { ChevronDown } from "lucide-react";
-import AOS from "aos";
-import "aos/dist/aos.css";
+
 
 const faqs = [
   {
@@ -40,13 +39,7 @@ export default function FAQSection() {
     setOpenIndex(openIndex === index ? null : index);
   };
 
-  useEffect(() => {
-    AOS.init({
-      duration: 800,
-      once: true,
-      easing: "ease-in-out",
-    });
-  }, []);
+  
 
   return (
     <section className="py-16 bg-gradient-to-br from-gray-50 to-gray-100">
@@ -66,8 +59,7 @@ export default function FAQSection() {
             return (
               <div
                 key={index}
-                data-aos="fade-up"
-                data-aos-delay={index * 100}
+              
                 className={`rounded-2xl border border-gray-200 transition-all duration-300 shadow-sm 
                   hover:shadow-md cursor-pointer
                   ${isOpen ? "bg-[#FFF4ED]" : "bg-white hover:bg-[#FFF4ED]"}`}

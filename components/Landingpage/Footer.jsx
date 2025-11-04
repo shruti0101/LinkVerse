@@ -39,7 +39,7 @@ const Footer = () => {
       {/* Overlay */}
       <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/80 to-black/90"></div>
       <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-[#D33F00] via-orange-400 to-[#D33F00]"></div>
-      <div className="absolute inset-0 bg-[url('/patterns/noise.png')] opacity-15 mix-blend-overlay"></div>
+      <div className="absolute inset-0 bg-[url('/patterns/noise.webp')] opacity-15 mix-blend-overlay"></div>
 
       <div className="relative max-w-7xl mx-auto px-6 md:px-12">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-10">

@@ -61,7 +61,7 @@ export default function OurApproach() {
         <p
           data-aos="fade-up"
           data-aos-delay="200"
-          className="max-w-2xl mx-auto text-center text-gray-800 text-base sm:text-lg mb-8 px-4"
+          className="max-w-2xl mx-auto text-center text-gray-800 text-base sm:text-md mb-5 px-4"
         >
           Our highly certified and experienced network architects and engineers
           assess your current environment, identify outdated and underperforming
@@ -93,7 +93,7 @@ export default function OurApproach() {
                   key={index}
                   data-aos="zoom-in"
                   data-aos-delay={index * 150}
-                  className="bg-white/80 backdrop-blur-xl rounded-2xl shadow-lg p-5 sm:p-6 border border-orange-100 hover:shadow-2xl hover:scale-105 transition-all duration-300"
+                  className="bg-white/80 backdrop-blur-xl rounded-2xl shadow-lg p-5 sm:p-4 border border-orange-100 hover:shadow-2xl hover:scale-105 transition-all duration-300"
                 >
                   <div
                     className={`mb-4 w-12 h-12 rounded-xl bg-gradient-to-br ${step.gradient} flex items-center justify-center shadow-md`}

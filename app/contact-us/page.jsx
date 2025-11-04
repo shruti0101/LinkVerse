@@ -8,13 +8,14 @@ const Contact = () => {
     <>
       {/* ===== Banner Section ===== */}
       <div
-        className="relative px-4 sm:px-6 md:px-12 bg-cover bg-center h-[50vh] sm:h-[60vh] md:h-[90vh] flex flex-col items-start justify-center overflow-hidden"
+        className="relative px-4 sm:px-6 md:px-12 bg-cover bg-center h-[50vh] sm:h-[60vh] md:h-[80vh] flex flex-col items-start justify-center overflow-hidden"
         style={{
-          backgroundImage: "url('/about/Network-Infrastructure-Hero.webp')",
+          backgroundImage: "url('/about/bg-image.webp')",
         }}
       >
         {/* Overlay Gradient */}
-        <div className="absolute inset-0 bg-gradient-to-b from-[#0A3A49]/40 via-[#0A3A49]/60 to-[#F25F3D]/30"></div>
+        <div className="absolute inset-0 bg-gradient-to-b from-[#0A3A49]/60 via-[#0A3A49]/80 to-[#000000]/40"></div>
+
 
         {/* Content */}
         <div className="relative z-10 text-white max-w-3xl">

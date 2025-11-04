@@ -14,6 +14,8 @@ import Whatsapp from "@/components/Landingpage/Whatsapp";
 import Form from "@/components/Landingpage/Form"
 import Countup from "@/components/Landingpage/Countup"
 import TestimonialSlider from "@/components/Landingpage/Testimonial";
+import Slider from "@/components/Landingpage/Slider"
+import ClienteleSection from "@/components/Landingpage/Clientele";
 export default function Home() {
   return (
    <>
@@ -21,16 +23,19 @@ export default function Home() {
    <Scrolltop></Scrolltop>
    <Whatsapp></Whatsapp>
    <Hero></Hero>
-   <Problem></Problem>
+  <Slider></Slider>
    <Missinvision></Missinvision>
   <Countup></Countup>
+   <Problem></Problem>
    <Services></Services>
        <Howtohelp></Howtohelp>
-   <Markets></Markets>
+
    <Approach></Approach>
+      <Markets></Markets>
    <Map></Map>
    <Form></Form>
    <Whychoose></Whychoose>
+   <ClienteleSection></ClienteleSection>
    <TestimonialSlider></TestimonialSlider>
    <Faq></Faq>
    </>

@@ -30,7 +30,7 @@ const EnquiryForm = () => {
         {/* Left Image */}
         <div className="flex flex-col items-center text-center space-y-4">
           <Image
-            src="/about/Gemini_Generated_Image_8u3ypa8u3ypa8u3y-removebg-preview.png"
+            src="/about/Gemini_Generated_Image_8u3ypa8u3ypa8u3y-removebg-preview.webp"
             alt="Networking & IT Infrastructure Solutions"
             width={750}
             height={600}
