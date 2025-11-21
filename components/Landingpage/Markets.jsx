@@ -22,7 +22,7 @@ const services = [
   },
   { 
     title: "Government", 
-    subtitle: "Secure and scalable LinkVerse networks supporting digital governance initiatives.", 
+    subtitle: "Secure and scalable LinkVerse Technology supporting digital governance initiatives.", 
     image: "8.webp" 
   },
   { 

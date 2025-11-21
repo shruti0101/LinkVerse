@@ -33,7 +33,7 @@ const tabs = [
           Our Vision as a Networking & IT Infrastructure Company
         </h2>
         <p>
-          At <b>LinkVerse Networks</b>, our vision is to become a globally
+          At <b>LinkVerse Technology</b>, our vision is to become a globally
           recognized provider of Networking & IT Infrastructure solutions,
           known for excellence, innovation, and reliable technology services.
           We focus on helping businesses achieve operational efficiency,
@@ -74,7 +74,7 @@ const tabs = [
           </li>
         </ul>
         <p>
-          As a dedicated IT solutions provider, <b>LinkVerse Networks</b>{" "}
+          As a dedicated IT solutions provider, <b>LinkVerse Technology</b>{" "}
           envisions creating lasting impact, innovation, and growth for our
           clients and the industries we serve.
         </p>
@@ -92,7 +92,7 @@ const tabs = [
           Our Mission as a Networking & IT Infrastructure Company
         </h2>
         <p>
-          At <b>LinkVerse Networks</b>, our mission is to be the most trusted IT
+          At <b>LinkVerse Technology</b>, our mission is to be the most trusted IT
           Infrastructure partner, providing secure, scalable, and high-performance
           networking solutions to businesses worldwide. We are committed to
           delivering consistent service, technical expertise, and tailored IT
@@ -129,7 +129,7 @@ const tabs = [
           </li>
         </ul>
         <p>
-          As a dedicated IT solutions provider, <b>LinkVerse Networks</b> is
+          As a dedicated IT solutions provider, <b>LinkVerse Technology</b> is
           committed to excellence, reliability, and client success, making us
           a dependable partner for all networking and IT infrastructure needs.
         </p>
@@ -147,7 +147,7 @@ const tabs = [
           Our Core Values as a Networking & IT Infrastructure Company
         </h2>
         <p>
-          At <b>LinkVerse Networks</b>, our values form the foundation of
+          At <b>LinkVerse Technology</b>, our values form the foundation of
           everything we do. We believe in trust, reliability, and innovation in
           every service we provide. Our values guide us in delivering excellent
           IT solutions and building long-term partnerships.
@@ -176,7 +176,7 @@ const tabs = [
           </li>
         </ul>
         <p>
-          Guided by these values, <b>LinkVerse Networks</b> continues to grow as
+          Guided by these values, <b>LinkVerse Technology</b> continues to grow as
           a dependable IT Infrastructure provider, ensuring clients can always
           count on us for excellence.
         </p>
@@ -232,7 +232,7 @@ const tabs = [
   <h2 className="text-2xl md:text-4xl font-bold text-black mb-4">
     Welcome to{" "}
     <span className="font-semibold text-[#F76238]">
-      LinkVerse Networks
+      LinkVerse Technology
     </span>{" "}
     – Your Trusted Networking & IT Infrastructure Partner.
   </h2>
@@ -240,7 +240,7 @@ const tabs = [
   <p className="text-lg text-black leading-relaxed ">
     At{" "}
     <span className="font-semibold text-[#F76238]">
-      LinkVerse Networks
+      LinkVerse Technology
     </span>{" "}
     we take pride in being a{" "}
     <span className="font-semibold text-[#F76238]">
@@ -254,7 +254,7 @@ const tabs = [
     <span className="font-semibold text-[#F76238]">
       Networking & IT Infrastructure
     </span>{" "}
-    LinkVerse Networks understands the diverse needs of industries such as{" "}
+    LinkVerse Technology understands the diverse needs of industries such as{" "}
     <span className="font-semibold text-[#F76238]">
       enterprise IT, data centers, cloud services, telecommunications, and cybersecurity
     </span>
@@ -262,7 +262,7 @@ const tabs = [
   </p>
 
   <p className="text-lg text-black leading-relaxed">
-    As a dedicated IT solutions provider, we go beyond just implementing networks. LinkVerse Networks provides technical guidance, infrastructure optimization, and customized IT solutions, ensuring our clients receive maximum value from every deployment. Choosing LinkVerse Networks as your{" "}
+    As a dedicated IT solutions provider, we go beyond just implementing networks. LinkVerse Technology provides technical guidance, infrastructure optimization, and customized IT solutions, ensuring our clients receive maximum value from every deployment. Choosing LinkVerse Technology as your{" "}
     <span className="font-semibold text-[#F76238]">
       IT Infrastructure partner means collaborating with a company that delivers reliability, consistency, and excellence in every service engagement.
     </span>

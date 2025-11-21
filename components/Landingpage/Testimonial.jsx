@@ -5,19 +5,19 @@ import { ChevronLeft, ChevronRight } from "lucide-react";
 
 const testimonials = [
   {
-    text: "LinkVerse Networks completely redesigned our corporate network infrastructure. Their team implemented a secure, high-performance solution that improved connectivity across all our offices. Downtime is now virtually zero, and the staff is extremely satisfied with the seamless user experience.",
+    text: "LinkVerse Technology completely redesigned our corporate network infrastructure. Their team implemented a secure, high-performance solution that improved connectivity across all our offices. Downtime is now virtually zero, and the staff is extremely satisfied with the seamless user experience.",
     name: "Enterprise IT – Mumbai",
   },
   {
-    text: "We migrated our entire on-premise setup to a scalable cloud infrastructure with LinkVerse Networks. The transition was smooth, and their support team ensured minimal disruption to daily operations. Their expertise in cloud networking helped optimize our resources and reduce costs significantly.",
+    text: "We migrated our entire on-premise setup to a scalable cloud infrastructure with LinkVerse Technology. The transition was smooth, and their support team ensured minimal disruption to daily operations. Their expertise in cloud networking helped optimize our resources and reduce costs significantly.",
     name: "Cloud Services Company – Bangalore",
   },
   {
-    text: "Our organization needed a reliable VoIP and unified communications solution. LinkVerse Networks delivered a robust setup with integrated monitoring, which has improved collaboration and efficiency among our teams. Their ongoing support has been exemplary.",
+    text: "Our organization needed a reliable VoIP and unified communications solution. LinkVerse Technology delivered a robust setup with integrated monitoring, which has improved collaboration and efficiency among our teams. Their ongoing support has been exemplary.",
     name: "Corporate Office – Delhi",
   },
   {
-    text: "We rely heavily on network security for our data-sensitive operations. LinkVerse Networks implemented advanced cybersecurity measures including zero-trust architecture and monitoring tools. We now feel confident about protecting critical assets from cyber threats.",
+    text: "We rely heavily on network security for our data-sensitive operations. LinkVerse Technology implemented advanced cybersecurity measures including zero-trust architecture and monitoring tools. We now feel confident about protecting critical assets from cyber threats.",
     name: "Financial Services Firm – Pune",
   },
   {

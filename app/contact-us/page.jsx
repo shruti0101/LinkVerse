@@ -70,7 +70,7 @@ const Contact = () => {
           <div className="md:pl-0 lg:pl-10 mt-10 md:mt-0">
             <p className="text-gray-700 text-sm sm:text-base md:text-lg leading-relaxed mb-6 font-medium text-center md:text-left">
               <span className="block text-[#002B5B] text-lg sm:text-xl md:text-3xl font-extrabold mb-3">
-                Reach Out to LinkVerse Networks for Tailored{" "}
+                Reach Out to LinkVerse Technology for Tailored{" "}
                 <span className="text-[#F86613]">Networking & IT Infrastructure Solutions</span>
               </span>
               <span className="block mb-3 text-gray-800">

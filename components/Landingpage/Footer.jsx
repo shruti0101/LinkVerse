@@ -55,7 +55,7 @@ const Footer = () => {
             />
 
             <p className="text-sm text-white leading-relaxed mb-4">
-              At LinkVerse Networks, we specialize in delivering end-to-end
+              At LinkVerse Technology, we specialize in delivering end-to-end
               networking and IT infrastructure solutions. From enterprise-grade
               connectivity to secure cloud and cybersecurity services, we help
               businesses stay connected, secure, and future-ready.
@@ -186,7 +186,7 @@ const Footer = () => {
 
       {/* Bottom Bar */}
       <div className="border-t border-gray-700 mt-10 pt-4 text-center text-sm text-white">
-        © 2025 LinkVerse Networks, All Rights Reserved
+        © 2025 LinkVerse Technology, All Rights Reserved
       </div>
     </footer>
   );
