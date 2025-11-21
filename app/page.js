@@ -1,7 +1,7 @@
 import Image from "next/image";
 import Hero from "@/components/Hero"
-import Howtohelp from "@/components/Landingpage/Howtohelp"
-import Missinvision from "@/components/Landingpage/Mission"
+// import Howtohelp from "@/components/Landingpage/Howtohelp"
+
 import Services from "@/components/Landingpage/Sevices"
 import Markets from "@/components/Landingpage/Markets"
 import Problem from "@/components/Landingpage/Problem";
@@ -16,28 +16,34 @@ import Countup from "@/components/Landingpage/Countup"
 import TestimonialSlider from "@/components/Landingpage/Testimonial";
 import Slider from "@/components/Landingpage/Slider"
 import ClienteleSection from "@/components/Landingpage/Clientele";
+import Addons from "@/components/Landingpage/Addons";
+import Portfolio from "@/components/Landingpage/Portfolio";
 export default function Home() {
-  return (
+  return (  
    <>
 
    <Scrolltop></Scrolltop>
    <Whatsapp></Whatsapp>
    <Hero></Hero>
+   <Addons> </Addons>
   <Slider></Slider>
-   <Missinvision></Missinvision>
-  <Countup></Countup>
-   <Problem></Problem>
+ <Portfolio></Portfolio>
+ 
+ 
    <Services></Services>
-       <Howtohelp></Howtohelp>
+       {/* <Howtohelp></Howtohelp> */}
 
    <Approach></Approach>
+    <Countup></Countup>
       <Markets></Markets>
    <Map></Map>
    <Form></Form>
    <Whychoose></Whychoose>
    <ClienteleSection></ClienteleSection>
-   <TestimonialSlider></TestimonialSlider>
+   <TestimonialSlider></TestimonialSlider>\
+    <Problem></Problem>
    <Faq></Faq>
+    
    </>
   );
 }

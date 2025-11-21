@@ -5,11 +5,25 @@ import { motion, AnimatePresence } from "framer-motion";
 import Link from "next/link";
 const Hero = () => {
   const content = [
-    { title: "Access Products for Any Network, Any Need", desc: "Achieve flexibility and scalability with Aviat’s versatile access products, built to adapt to your evolving network. Experience unmatched performance designed to grow with your business." },
-    { title: "Speed Up Network Builds with Aviat Design", desc: "Plan faster, find tower space, and create bills of materials with Aviat Design’s real-time, intuitive tools. Accelerate your projects and reduce time-to-market effortlessly." },
-    { title: "Reliable Network Solutions", desc: "Optimize your connectivity with innovative, reliable, and scalable solutions designed for modern networks. Ensure uptime and efficiency for mission-critical operations." },
-    { title: "Secure Connectivity Everywhere", desc: "Protect your data and ensure secure communication with next-generation network security solutions. Safeguard your business from threats while staying connected." },
-    { title: "Future-Proof Your Network", desc: "Stay ahead with scalable, cloud-ready, and sustainable solutions built for tomorrow’s challenges. Empower your growth with technology that evolves as you do." }
+{ 
+  title: "IT Support & IT Solutions Company in India", 
+  desc: "We provide complete IT support and reliable IT solutions for businesses of all sizes across India. Our team is always ready to help you anytime, anywhere, for any technical issue or IT requirement without hassle." 
+},
+
+{ 
+  title: "Onsite IT Engineers", 
+  desc: "Our experienced and qualified IT engineers visit your location to fix problems, install systems, and ensure your IT setup runs smoothly with quick response and professional service." 
+},
+
+{ 
+  title: "Office IT Setups", 
+  desc: "We handle everything related to office IT setups including networking, system installation, configuration, and ongoing support, giving you all IT services conveniently under one roof." 
+},
+
+
+
+   
+
   ];
 
   const [index, setIndex] = useState(0);
@@ -81,7 +95,7 @@ const Hero = () => {
               
             >
               <Link href="/contact-us">
-                  Request a Quote
+              Contact Us
               </Link>
           
             </motion.button>

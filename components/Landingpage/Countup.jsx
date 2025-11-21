@@ -36,26 +36,26 @@ export default function StatsWithIcons() {
   const stats = [
     {
       icon: <FaLightbulb size={50} />,
-      value: 8,
-      label: "Years of Experience",
+      value: 22647,
+      label: "Resolved Tickets",
        suffix: "+",
     },
     {
       icon: <FaUsersCog size={50} />,
-      value: 2,
-      label: "Warehouses",
+      value: 8,
+      label: "Years of Service",
       suffix: "+",
     },
     {
       icon: <FaRegStar size={50} />,
       value: 100,
-      label: "Employees",
+      label: "Certified Engineers",
       suffix: "+",
     },
     {
       icon: <FaIndustry size={50} />,
-      value: 400,
-      label: "Active Customers",
+      value: 5230,
+      label: "Satisfied Customers",
        suffix: "+",
     },
   ];
