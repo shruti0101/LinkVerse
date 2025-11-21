@@ -1,6 +1,6 @@
-import Image from "next/image";
+
 import Hero from "@/components/Hero"
-// import Howtohelp from "@/components/Landingpage/Howtohelp"
+import Howtohelp from "@/components/Landingpage/Howtohelp"
 
 import Services from "@/components/Landingpage/Sevices"
 import Markets from "@/components/Landingpage/Markets"
@@ -31,7 +31,7 @@ export default function Home() {
  
  
    <Services></Services>
-       {/* <Howtohelp></Howtohelp> */}
+       <Howtohelp></Howtohelp>
 
    <Approach></Approach>
     <Countup></Countup>
