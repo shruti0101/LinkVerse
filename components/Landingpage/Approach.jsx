@@ -46,7 +46,7 @@ export default function OurApproach() {
   }, []);
 
   return (
-    <section className="relative bg-gradient-to-b from-gray-50 to-orange-50 py-16 overflow-hidden">
+    <section className="relative bg-gradient-to-b from-gray-50 to-orange-50 py-8 overflow-hidden">
       <div className="w-full mx-auto px-4 sm:px-6 md:px-10 lg:px-12 relative z-10">
         {/* Title */}
         <h2
@@ -61,7 +61,7 @@ export default function OurApproach() {
         <p
           data-aos="fade-up"
           data-aos-delay="200"
-          className="max-w-2xl mx-auto text-center text-gray-800 text-base sm:text-md mb-5 px-4"
+          className="max-w-2xl mx-auto text-center text-gray-800 text-sm sm:text-md mb-5 px-2"
         >
           Our highly certified and experienced network architects and engineers
           assess your current environment, identify outdated and underperforming

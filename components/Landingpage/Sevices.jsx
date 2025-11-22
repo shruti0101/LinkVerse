@@ -22,17 +22,17 @@ export default function Markets() {
       icon: <ClipboardCheck className="w-6 h-6 text-[#F96614]" />,
     },
     {
-      title: "Support",
+      title: "IT Support Services",
       desc: "Our dedicated support team ensures your network infrastructure remains fully operational, minimizing downtime and maximizing ROI on your technology investments.",
       icon: <Headphones className="w-6 h-6 text-[#F96614]" />,
     },
     {
-      title: "Education & Certification",
-      desc: "LinkVerse training programs help build expertise in modern networking technologies, including wireless, IP/MPLS, and infrastructure management for professionals.",
+      title: "Onsite IT Resources",
+      desc: "We ensure that the onsite IT resources that we deploy to your site are carefully selected for your project keeping in mind the professional and HR requirements of your organization.",
       icon: <GraduationCap className="w-6 h-6 text-[#F96614]" />,
     },
     {
-      title: "Consulting Services",
+      title: "Office IT Setups",
       desc: "Our consultants provide tailored guidance to plan, implement, and optimize network strategies, ensuring scalable and secure infrastructures for your business.",
       icon: <Users className="w-6 h-6 text-[#F96614]" />,
     },
@@ -56,14 +56,14 @@ export default function Markets() {
             LINKVERSE SERVICES
           </span>
 
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold mt-3 sm:mt-4 leading-snug text-gray-900">
+          <h2 className="text-2xl sm:text-4xl lg:text-5xl font-extrabold mt-3 sm:mt-4 leading-snug text-gray-900">
             Unlocking the Power of{" "}
             <span className="bg-gradient-to-r from-[#F96614] to-orange-700 bg-clip-text text-transparent">
               Network & Infrastructure
             </span>
           </h2>
 
-          <p className="mt-3 sm:mt-4 text-base sm:text-lg text-gray-600 leading-relaxed">
+          <p className="mt-3 sm:mt-4 text-base sm:text-lg text-black leading-relaxed">
             From planning to security,{" "}
             <strong className="text-[#F96614]">LinkVerse</strong> delivers end-to-end
             services that transform networks into highly reliable, scalable, and

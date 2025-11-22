@@ -75,7 +75,7 @@ export default function WhyChooseUs() {
       </div>
 
       {/* 6-Points Grid */}
-      <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-10 relative z-10">
+      <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-8 relative z-10">
         {points.map((item, index) => (
           <div
             key={index}

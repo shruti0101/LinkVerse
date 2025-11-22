@@ -7,21 +7,11 @@
 @import "slick-carousel/slick/slick-theme.css";
 
 
-@keyframes wave {
-  0% {
-    background-position: 0 0, 0 0;
-  }
-  50% {
-    background-position: 50px 50px, -50px -50px;
-  }
-  100% {
-    background-position: 0 0, 0 0;
-  }
+body{
+  overflow-x: hidden;
 }
 
-.wave-bg {
-  animation: wave 10s ease-in-out infinite;
-}
+
 
 
 

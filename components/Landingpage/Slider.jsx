@@ -22,7 +22,7 @@ const ServicesCarousel = () => {
 
 
   return (
-    <section className="py-7 md:py-10  bg-zinc-100">
+    <section className="py-7 md:py-10 px-6  bg-zinc-100">
       {/* Heading */}
       <div
         className="text-center max-w-3xl mx-auto mb-16 px-4"
