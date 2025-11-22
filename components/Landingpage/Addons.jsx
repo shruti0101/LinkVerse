@@ -29,7 +29,7 @@ export default function PremiumServices() {
     <>
       {/* ================= FIRST SECTION ================ */}
       <section className="w-full py-10 bg-white">
-        <h1 className="text-center text-2xl sm:text-3xl md:text-5xl lg:text-6xl mb-10 font-bold text-gray-900 px-4">
+        <h1 className="text-center text-3xl md:text-5xl lg:text-6xl mb-10 font-bold text-gray-900 px-4">
           IT Support Services in Delhi
         </h1>
 
